@@ -1,5 +1,6 @@
 The ShimLibs
 ---
+Version 0.1
 
 The ShimLibs are a collection of hacky functions designed to make using functions from various libraries just a little bit more bearable. You probably *shouldn't* use them, but you could.
 
