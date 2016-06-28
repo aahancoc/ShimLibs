@@ -1,0 +1,1 @@
+void AlertMsg (const char *Message, const char *Title);
