@@ -12,7 +12,7 @@ If your code doesn't use a particular library, just don't include it's files. Ev
 ##Notes
 * Just about every string output is a malloc()-allocated string. This means you should free it when you're done.
 * This uses asprintf() extensively. If you don't have asprintf(), get a compiler that does. (Or just use an asprintf() shim, if you have no choice.)
-* There is a global variable named CURRERROR that the ShimLibs dump custom errors to. Don't forget to a.) define CURRERROR and b.) check it after calling any 
+* There is a global variable named CURRERROR that the ShimLibs dump custom errors to. Don't forget to a.) define CURRERROR and b.) check it after calling any ShimLib functions.
 
 ##Features
 ###Jansson
@@ -57,7 +57,7 @@ There are also functions to, immediately after the bind() calls, get the first n
 There's also a function that returns the results table as a JSON object, for easy analysis using Jansson's for loop macros or object indexing. It might seem wasteful, but it is ungodly convienent compared to doing things the 'proper' way.
 
 ##Win32
-This is where get get flat-out *hacky*. You thought SQLite was weird? Hah!
+This is where we get flat-out *hacky*. You thought SQLite was weird? Hah!
 
 First thing, there's functions designed to select a folder or a file via GUI and return it's path. It's just a boilerplate wrapper, really. Also, I doubt you care, but `SelectFile()` doesn't run on Windows NT 4.0. I don't know why.
 
